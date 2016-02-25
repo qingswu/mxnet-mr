@@ -4,7 +4,9 @@ mxnet训练自己的数据
 作为符号式编程和命令式编程的集大成者，mxnet是caffe强有力的替代者，但是由于参考资料很少，现在并没有大规模的普及开来。
 
 虽然此前有文章讲解了如何使用mxnet跑mnist数据集和作画，但是我们需要的是跑自己的数据集，这儿dmlc做的并不是很系统，各个点分散在好几处，给人的感觉是很乱，没有重点：
+
 [用MXnet实战深度学习之一:安装GPU版mxnet并跑一个MNIST手写数字识别](http://phunter.farbox.com/post/mxnet-tutorial1)
+
 [用MXnet实战深度学习之二:Neural art](http://phunter.farbox.com/post/mxnet-tutorial2)
 
 一直想找一个mxnet跑自己数据的教程，无奈没找到，只好自己造轮子了。整个工程结构如下图所示：
