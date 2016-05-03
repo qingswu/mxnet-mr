@@ -25,16 +25,21 @@ chars文件夹是我从车牌识别的开源项目[easypr](https://github.com/li
 python make_list.py chars chars/chars --recursive=True
 "x64/release/im2rec" chars/chars.lst chars/ chars/train.rec
 
+make_list.py后参数的含义是：数据存放的文件夹、所生成数据列表的文件名前缀（后缀默认是lst）、是否递归处理（也就是进入子文件夹）。
+im2rec是自己编译生成的exe文件，后面参数含义是：上面生成的lst文件、数据所在文件夹、以及生成的记录文件rec。
 
 3.开始训练
 双击打开VS2013的解决方案mxnettools.sln，设置mxnettools为启动项，charstrain.py为启动文件，Ctrl+F5运行即可，一点需要注意的是每次更换数据集别忘了把均值文件mean.bin删掉让它重新生成
 ![train](figures/train.png)
 
 4.进行测试
-charstest是用来测试的样本，为了简单起见，我提取了前20个样本作为测试集，实际应用中避免这样做。
+charsbatchtest是用来批量测试的样本，为了简单起见，我提取了前20个样本作为测试集，实际应用中避免这样做。
 制作测试集合训练集的过程大致相同，把charstest.py设为启动文件就可以测试了，在训练集上早就到1的参数在测试集才只有可怜的69%，仅比随机猜测略好那么一点!
 
 ![test](figures/test.png)
 
 5.工程化应用
 charstest.py里面已经包含了用于预测输出的代码，提取需要的部分加入到自己的工程中去吧。
+
+相关：
+[MatConvNet使用指南,训练自己的数据](https://github.com/imistyrain/MatConvNet-mr)

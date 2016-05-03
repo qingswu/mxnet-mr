@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>2c93f7ed-2e3a-4de9-8656-f4d14958abaf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>charstrain.py</StartupFile>
+    <StartupFile>charsbatchtest.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,10 +26,14 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="charstest.py">
+    <Compile Include="charsbatchtest.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="charstest.py" />
     <Compile Include="charstrain.py" />
+    <Compile Include="generatesynsetwords.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
   <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
