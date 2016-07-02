@@ -1,3 +1,10 @@
+OS X/Linux
+-----
+1. Compile mxnet, setup LD_LIBRARY_PATH/DYLD_LIBRARY_PATH
+2. Modify generatetrain.sh's im2rec path and run it
+3. Training: python charstrain.py
+4. Test on a single image: python charstest.py
+
 mxnet训练自己的数据
 -----
 
